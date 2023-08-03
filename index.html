@@ -1,11 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
     <title>RegForm</title>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <div class="regForm">
+      <form>
+        <div class="container">
+          <h1>სარეგისტრაციო ფორმა</h1>
+          <p>გთხოვთ შეავსოთ სარეგისტრაციო ფორმა</p>
+
+          <div class="container-a">
+            <div class="enterInfo">
+              <label for="idNum"><b>პ/ნ:</b></label>
+              <input
+                type="text"
+                placeholder="პირადი ნომერი"
+                name="idNum"
+                id="idNum"
+                required
+              />
+            </div>
+
+            <div class="enterInfo">
+              <label for="tel"><b>ტ/ნ:</b></label>
+              <input
+                type="tel"
+                placeholder="ტელეფონის ნომერი"
+                name="tel"
+                id="tel"
+                required
+              />
+            </div>
+
+            <div class="enterInfo">
+              <!-- <label for="job"><b>ს/ა:</b></label> -->
+              <textarea rows="10" placeholder="სამსახურის აღწერილობა"></textarea>
+            
+            </div>
+          
+
+          <button class="registerBtn">რეგისტრაცია</button>
+        </div>
+      </form>
+    </div>
+
+    <script src="js/app.js"></script>
+  </body>
 </html>
