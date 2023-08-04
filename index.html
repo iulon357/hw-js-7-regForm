@@ -7,43 +7,26 @@
     <title>RegForm</title>
   </head>
   <body>
-    <div class="regForm">
-      <form>
-        <div class="container">
-          <h1>სარეგისტრაციო ფორმა</h1>
-          <p>გთხოვთ შეავსოთ სარეგისტრაციო ფორმა</p>
-
-          <div class="container-a">
-            <div class="enterInfo">
-              <label for="idNum"><b>პ/ნ:</b></label>
-              <input
-                type="text"
-                placeholder="პირადი ნომერი"
-                name="idNum"
-                id="idNum"
-                required
-              />
-            </div>
-
-            <div class="enterInfo">
-              <label for="tel"><b>ტ/ნ:</b></label>
-              <input
-                type="tel"
-                placeholder="ტელეფონის ნომერი"
-                name="tel"
-                id="tel"
-                required
-              />
-            </div>
-
-            <div class="enterInfo">
-              <!-- <label for="job"><b>ს/ა:</b></label> -->
-              <textarea rows="10" placeholder="სამსახურის აღწერილობა"></textarea>
-            
-            </div>
-          
-
-          <button class="registerBtn">რეგისტრაცია</button>
+    <div class="container">
+      <form action="/my-handling-form-page" method="post">
+        <h1>სარეგისტრაციო ფორმა</h1>
+        <div>
+          <label for="personal_number">პ/ნ</label>
+          <input type="text" id="personal_number" name="user_number" maxlength="11" onkeypress="return inputNumber(event)" placeholder="შეიყვანეთ პირადი ნომერი" required/>
+        </div>
+      
+        <div>
+          <label for="mobile_number">მ/ნ</label>
+          <input type="tel" id="mobile_number" name="user_mobile" maxlength="9" placeholder="შეიყვანეთ მობილურის ნომერი" required/>
+        </div>
+      
+        <div>
+          <label for="job_description">აღწერილობა:</label>
+          <textarea id="job_description" name="user_description" maxlength="50" placeholder="შეიყვანეთ აღწერილობა" required></textarea>
+        </div>
+      
+        <div class="regButton">
+          <button type="submit">რეგისტრაცია</button>
         </div>
       </form>
     </div>
